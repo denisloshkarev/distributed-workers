@@ -12,6 +12,6 @@ export default class Job {
   @Column()
   status: JobStatus;
 
-  @Column()
-  http_code: number;
+  @Column({ nullable: true })
+  http_code?: number;
 }

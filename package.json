@@ -1,26 +1,29 @@
 {
-   "name": "distributed-workers",
-   "version": "0.0.1",
-   "description": "The worker requests each URL inside the table and stores the resulting response code",
-   "devDependencies": {
-      "@types/node": "^8.0.29",
-      "@typescript-eslint/eslint-plugin": "^4.1.1",
-      "@typescript-eslint/parser": "^4.1.1",
-      "eslint": "^7.9.0",
-      "eslint-config-airbnb-typescript": "^10.0.0",
-      "eslint-plugin-import": "^2.22.0",
-      "nodemon": "^2.0.4",
-      "ts-node": "3.3.0",
-      "typescript": "^3.3.3333"
-   },
-   "dependencies": {
-      "typeorm": "0.2.26",
-      "reflect-metadata": "^0.1.10",
-      "pg": "^7.3.0"
-   },
-   "scripts": {
-      "start": "ts-node src/index.ts",
-      "watch": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/index.ts",
-      "eslint": "eslint --ext .ts --fix ./src"
-   }
+  "name": "distributed-workers",
+  "version": "0.0.1",
+  "description": "The worker requests each URL inside the table and stores the resulting response code",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.29",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-typescript": "^10.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "nodemon": "^2.0.4",
+    "ts-node": "3.3.0",
+    "typescript": "3.9.7"
+  },
+  "dependencies": {
+    "pg": "^7.3.0",
+    "reflect-metadata": "^0.1.10",
+    "typeorm": "0.2.26"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "watch": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/index.ts",
+    "eslint": "eslint --ext .ts --fix ./src"
+  }
 }
