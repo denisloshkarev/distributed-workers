@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  # DB
+  database:
+    image: postgres:12.3
+    env_file:
+      - ../pgdb/pgdb.env
+    volumes:
+      - pg-data:/var/lib/postgresql/data/
+    ports:
+      - "127.0.0.1:5432:5432"
+
+
+volumes:
+  pg-data:
+
+# Docker Networks
+networks:
+  app-network:
+    driver: bridge

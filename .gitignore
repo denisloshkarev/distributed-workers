@@ -1,0 +1,10 @@
+.idea/
+.vscode/
+node_modules/
+build/
+tmp/
+temp/
+
+# Configs
+ormconfig.json
+ci/pgdb/pgdb.env
