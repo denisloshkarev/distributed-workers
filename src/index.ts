@@ -6,11 +6,10 @@ const init = async () => {
   await createConnection();
 };
 
-init().then(() => {
+init().then(async () => {
   console.log('DB connection established.');
-  Array(20).fill(null).forEach(() => {
-    Worker.run().catch((e) => console.error(e));
-  });
+  const worker = new Worker();
+  await worker.run();
 }).catch((e) => {
   console.error(e);
 });
